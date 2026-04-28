@@ -1,11 +1,15 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/posts/stock-investment-for-progress/index.html",
-      "/posts/the-old-man-and-the-sea/index.html",
-      "/posts/zorba-the-greek/index.html",
-      "/posts/demian/index.html"
+      "/blog/posts/stock-investment-for-progress/draft.html",
+      "/blog/posts/stock-investment-for-progress/search.html",
+      "/blog/posts/the-old-man-and-the-sea/draft.html",
+      "/blog/posts/the-old-man-and-the-sea/search.html",
+      "/blog/posts/stock-investment-for-progress/index.html",
+      "/blog/posts/the-old-man-and-the-sea/index.html",
+      "/blog/posts/zorba-the-greek/index.html",
+      "/blog/posts/demian/index.html"
     ]
   }
 ]

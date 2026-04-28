@@ -1,58 +1,282 @@
 [
   {
-    "objectID": "posts/zorba-the-greek/index.html",
-    "href": "posts/zorba-the-greek/index.html",
+    "objectID": "PRD.html",
+    "href": "PRD.html",
+    "title": "제품 요구사항 정의서 (PRD): 도서 요약 및 리뷰 자동화 시스템",
+    "section": "",
+    "text": "특정 도서에 대해 미리 내용을 파악하고자 하는 독자들을 위한 ‘도서 리뷰 및 요약’ 블로그 자동화 시스템입니다. 키워드(도서명)를 입력받아 도서의 핵심 내용, 목차, 주요 인사이트를 수집/분석하고, 독자의 호기심을 자극하는 리뷰를 작성하여 Quarto 기반 블로그에 게시합니다.\n\n\n\n\n\n\n입력: 도서 제목 및 저자명.\n검색 및 수집:\n\nGoogle Search를 통해 해당 도서의 공식 소개, 목차, 베스트셀러 순위, 독자 서평 키워드를 수집합니다.\n수집된 정보를 search.md에 구조화하여 저장합니다.\n\n이미지 생성: Gemini API를 사용하여 도서의 주제나 분위기를 반영한 감성적인 블로그 커버 이미지를 생성 (image.jpg).\n\n\n\n\n\n페르소나 설정: “책의 핵심을 빠르게 파악하고 싶은 독자”를 타겟으로 하는 전문 리뷰어 톤앤매너.\n콘텐츠 구성:\n\n도서의 핵심 요약 (3문장)\n주요 타겟 독자층 추천\n목차별 핵심 내용 정리\n책에서 얻을 수 있는 결정적 인사이트 (Key Takeaways)\n\n출력: draft.md (Quarto YAML frontmatter 포함).\n\n\n\n\n\nQuarto 렌더링: draft.md를 렌더링하여 SEO 최적화된 HTML 페이지 생성.\n구조: 도서별 개별 디렉토리 생성 (posts/YYYY-MM-DD-book-title/index.html).\n배포: GitHub Actions 또는 로컬 스크립트를 통해 GitHub Pages에 자동 배포.\n\n\n\n\n\n\nAI/LLM: Gemini API (정보 분석, 텍스트 생성, 이미지 생성).\nSearch: Google Search (Web Fetching).\nStatic Site Generator: Quarto (Markdown to HTML).\nDeployment: Git / GitHub Pages.\n\n\n\n\n\n\n\nGemini API를 활용한 도서 정보 요약 스크립트 작성.\n마크다운 파일을 Quarto로 수동 렌더링하여 결과물 확인.\n\n\n\n\n\ngoogle_web_search 및 web_fetch를 연동하여 실제 웹상의 도서 리뷰와 정보를 컨텍스트로 주입하는 로직 구현.\n도서 주제별 이미지 생성 프롬프트 최적화.\n\n\n\n\n\n키워드 입력부터 GitHub Push까지 한 번에 실행되는 main.py 개발.\nGitHub Pages 자동 배포 환경 설정.\n\n\n\n\n\nSEO(검색엔진 최적화)를 위한 메타 태그 자동 생성.\n이메일 구독 서비스 연동 또는 SNS 공유 자동화 (선택 사항)."
+  },
+  {
+    "objectID": "PRD.html#개요",
+    "href": "PRD.html#개요",
+    "title": "제품 요구사항 정의서 (PRD): 도서 요약 및 리뷰 자동화 시스템",
+    "section": "",
+    "text": "특정 도서에 대해 미리 내용을 파악하고자 하는 독자들을 위한 ‘도서 리뷰 및 요약’ 블로그 자동화 시스템입니다. 키워드(도서명)를 입력받아 도서의 핵심 내용, 목차, 주요 인사이트를 수집/분석하고, 독자의 호기심을 자극하는 리뷰를 작성하여 Quarto 기반 블로그에 게시합니다."
+  },
+  {
+    "objectID": "PRD.html#주요-기능-및-워크플로우",
+    "href": "PRD.html#주요-기능-및-워크플로우",
+    "title": "제품 요구사항 정의서 (PRD): 도서 요약 및 리뷰 자동화 시스템",
+    "section": "",
+    "text": "입력: 도서 제목 및 저자명.\n검색 및 수집:\n\nGoogle Search를 통해 해당 도서의 공식 소개, 목차, 베스트셀러 순위, 독자 서평 키워드를 수집합니다.\n수집된 정보를 search.md에 구조화하여 저장합니다.\n\n이미지 생성: Gemini API를 사용하여 도서의 주제나 분위기를 반영한 감성적인 블로그 커버 이미지를 생성 (image.jpg).\n\n\n\n\n\n페르소나 설정: “책의 핵심을 빠르게 파악하고 싶은 독자”를 타겟으로 하는 전문 리뷰어 톤앤매너.\n콘텐츠 구성:\n\n도서의 핵심 요약 (3문장)\n주요 타겟 독자층 추천\n목차별 핵심 내용 정리\n책에서 얻을 수 있는 결정적 인사이트 (Key Takeaways)\n\n출력: draft.md (Quarto YAML frontmatter 포함).\n\n\n\n\n\nQuarto 렌더링: draft.md를 렌더링하여 SEO 최적화된 HTML 페이지 생성.\n구조: 도서별 개별 디렉토리 생성 (posts/YYYY-MM-DD-book-title/index.html).\n배포: GitHub Actions 또는 로컬 스크립트를 통해 GitHub Pages에 자동 배포."
+  },
+  {
+    "objectID": "PRD.html#기술-스택",
+    "href": "PRD.html#기술-스택",
+    "title": "제품 요구사항 정의서 (PRD): 도서 요약 및 리뷰 자동화 시스템",
+    "section": "",
+    "text": "AI/LLM: Gemini API (정보 분석, 텍스트 생성, 이미지 생성).\nSearch: Google Search (Web Fetching).\nStatic Site Generator: Quarto (Markdown to HTML).\nDeployment: Git / GitHub Pages."
+  },
+  {
+    "objectID": "PRD.html#현실적인-구현-단계-roadmap",
+    "href": "PRD.html#현실적인-구현-단계-roadmap",
+    "title": "제품 요구사항 정의서 (PRD): 도서 요약 및 리뷰 자동화 시스템",
+    "section": "",
+    "text": "Gemini API를 활용한 도서 정보 요약 스크립트 작성.\n마크다운 파일을 Quarto로 수동 렌더링하여 결과물 확인.\n\n\n\n\n\ngoogle_web_search 및 web_fetch를 연동하여 실제 웹상의 도서 리뷰와 정보를 컨텍스트로 주입하는 로직 구현.\n도서 주제별 이미지 생성 프롬프트 최적화.\n\n\n\n\n\n키워드 입력부터 GitHub Push까지 한 번에 실행되는 main.py 개발.\nGitHub Pages 자동 배포 환경 설정.\n\n\n\n\n\nSEO(검색엔진 최적화)를 위한 메타 태그 자동 생성.\n이메일 구독 서비스 연동 또는 SNS 공유 자동화 (선택 사항)."
+  },
+  {
+    "objectID": "GEMINI.html",
+    "href": "GEMINI.html",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "",
+    "text": "블로그 생성은 다음의 단계를 거칩니다.\n\n\npost 디렉터리에 키워드에 기반한 하나의 단어를 이름으로 사용하여 새로운 디렉터리를 생성합니다. 이후 생성하는 파일은 이 디렉터리에 저장합니다.\n\n예시: post/sunset\n이 디렉터리의 이름은 키워드로 사용됩니다.\n\n키워드를 기반으로 GoogleSearch 도구를 사용하여 최신 정보를 정리하여 search.md에 작성합니다.\n\n관련 자료는 3개 이상 정리하고, 참고한 웹페이지의 위치도 search.md에 포함하도록 합니다.\n\ngemini-image-gen 도구를 사용하여 키워드를 설명하는 블로그 포스팅에 적합한 썸네일 이미지를 생성합니다.\n\n예시: gemini-image-gen “sunset”\n생성된 이미지는 post/sunset/ 디렉터리에 thumbnail.jpg라는 이름으로 저장합니다.\n\nsearch.md의 내용을 바탕으로 블로그 포스트 초안을 작성한 뒤 draft.md에 작성합니다.\n\n글의 구조는 다음과 같습니다.\n\n도입: 독자들의 흥미를 끄는 질문으로 시작\n핵심 요약: 가장 중요한 내용 3가지를 요약 및 설명\n상세 설명: 각 내용에 대해 구체적인 예시와 함께 상세히 설명\n마무리: 이 내용의 의미와 앞으로 미칠 영향에 대한 전망으로 마무리\n참고 자료: search.md에서 참고한 자료들을 링크로 제공\n\n\ndraft.md의 내용을 바탕으로 최종 블로그 포스트를 작성합니다.\n\n먼저 draft.md의 내용을 참고하여 각 문단마다 설명 보충과 이해를 돕기 위한 이미지를 gemini-image-gen 도구를 사용하여 생성합니다.\n생성된 이미지는 post/1.png, post/2.png…처럼 순서대로 이름을 사용해 저장합니다.\n\ndraft.md와 앞서 생성한 이미지들을 활용한 최종 블로그 포스트를 index.qmd에 작성합니다.\n\nindex.qmd의 헤더에는 embed-resources: true 설정을 추가하여 이미지가 포함되도록 합니다.\n\n마지막으로 quarto publish 도구를 사용하여 블로그 포스트를 게시합니다.\n\n예시: quarto publish gh-pages"
+  },
+  {
+    "objectID": "GEMINI.html#블로그-생성",
+    "href": "GEMINI.html#블로그-생성",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "",
+    "text": "블로그 생성은 다음의 단계를 거칩니다.\n\n\npost 디렉터리에 키워드에 기반한 하나의 단어를 이름으로 사용하여 새로운 디렉터리를 생성합니다. 이후 생성하는 파일은 이 디렉터리에 저장합니다.\n\n예시: post/sunset\n이 디렉터리의 이름은 키워드로 사용됩니다.\n\n키워드를 기반으로 GoogleSearch 도구를 사용하여 최신 정보를 정리하여 search.md에 작성합니다.\n\n관련 자료는 3개 이상 정리하고, 참고한 웹페이지의 위치도 search.md에 포함하도록 합니다.\n\ngemini-image-gen 도구를 사용하여 키워드를 설명하는 블로그 포스팅에 적합한 썸네일 이미지를 생성합니다.\n\n예시: gemini-image-gen “sunset”\n생성된 이미지는 post/sunset/ 디렉터리에 thumbnail.jpg라는 이름으로 저장합니다.\n\nsearch.md의 내용을 바탕으로 블로그 포스트 초안을 작성한 뒤 draft.md에 작성합니다.\n\n글의 구조는 다음과 같습니다.\n\n도입: 독자들의 흥미를 끄는 질문으로 시작\n핵심 요약: 가장 중요한 내용 3가지를 요약 및 설명\n상세 설명: 각 내용에 대해 구체적인 예시와 함께 상세히 설명\n마무리: 이 내용의 의미와 앞으로 미칠 영향에 대한 전망으로 마무리\n참고 자료: search.md에서 참고한 자료들을 링크로 제공\n\n\ndraft.md의 내용을 바탕으로 최종 블로그 포스트를 작성합니다.\n\n먼저 draft.md의 내용을 참고하여 각 문단마다 설명 보충과 이해를 돕기 위한 이미지를 gemini-image-gen 도구를 사용하여 생성합니다.\n생성된 이미지는 post/1.png, post/2.png…처럼 순서대로 이름을 사용해 저장합니다.\n\ndraft.md와 앞서 생성한 이미지들을 활용한 최종 블로그 포스트를 index.qmd에 작성합니다.\n\nindex.qmd의 헤더에는 embed-resources: true 설정을 추가하여 이미지가 포함되도록 합니다.\n\n마지막으로 quarto publish 도구를 사용하여 블로그 포스트를 게시합니다.\n\n예시: quarto publish gh-pages"
+  },
+  {
+    "objectID": "blog/posts/zorba-the-greek/index.html",
+    "href": "blog/posts/zorba-the-greek/index.html",
     "title": "조르바, 니체가 꿈꾼 초인의 춤: 자유의지와 아모르파티",
     "section": "",
     "text": "조르바, 니체가 꿈꾼 초인의 춤\n\n\n당신의 삶은 무거운 의무의 짐인가요, 아니면 즐거운 놀이인가요? 매일 아침 눈을 뜨며 “해야만 하는 일”들에 짓눌려 살아가고 있지는 않나요? 여기, 세상의 모든 굴레를 벗어던지고 오직 현재의 생명력으로 춤추는 한 남자가 있습니다. 바로 니코스 카잔차키스의 걸작, 《그리스인 조르바》의 주인공 조르바입니다. 오늘은 조르바의 삶을 니체의 철학적 시선으로 분석하며, 우리가 어떻게 진정한 자유에 도달할 수 있는지 살펴보겠습니다.\n\n핵심 요약: 니체가 말하는 정신의 3단계와 조르바\n\n낙타의 단계 (의무): 사회적 규범과 지식의 무게를 견디며 “너는 해야 한다”는 명령에 순응하는 단계입니다.\n사자의 단계 (자유): “나는 하고자 한다”며 기존 가치를 부정하고 자신만의 자유를 쟁취하기 위해 포효하는 투쟁의 단계입니다.\n어린아이의 단계 (유희): 모든 것을 망각하고 새로운 시작을 긍정하며, 삶을 있는 그대로의 ’놀이’로 받아들이는 최종적인 자유의 단계입니다.\n\n\n\n\n상세 분석: 왜 조르바는 ’위버멘쉬’인가?\n\n1. 낙타의 허물을 벗고 사자로 포효하다\n\n\n\n낙타의 단계: 의무와 관념의 무게\n\n\n소설의 화자인 ’나’는 책 속에 파묻힌 전형적인 지식인입니다. 그는 관념적인 진리에 집착하며 세상의 무게를 낙타처럼 짊어지고 살아가죠. 반면 조르바는 다릅니다. 그는 과거의 도덕이나 미래의 걱정에 얽매이지 않습니다.\n조르바는 한때 도자기 만드는 일에 방해가 된다는 이유로 자신의 손가락 하나를 스스로 잘라버렸던 인물입니다. 이는 기존의 가치 체계나 자신의 신체적 고통조차 초월하여 본질적인 목적과 자유에 집중하는 ‘사자’와 같은 야성을 단적으로 보여줍니다. 그는 타인의 시선이나 사회적 계약이 아닌, 자신의 뜨거운 생명력에서 우러나오는 ‘자유의지’로 세상을 마주합니다.\n\n\n2. 어린아이의 마음으로 추는 ’아모르파티’의 춤\n\n\n\n사자의 단계: 자유를 향한 투쟁\n\n\n니체가 말한 정신의 최종 단계는 바로 ‘어린아이’입니다. 어린아이는 편견 없이 세상을 바라보며, 매 순간을 창조적인 놀이로 만듭니다. 조르바는 말로 표현할 수 없는 거대한 감정이 몰아칠 때면 자신의 악기인 ’산투리’를 켜거나 거친 춤을 춥니다. 그에게 예술은 지적인 유희가 아니라 생존을 위한 절규이자 기쁨의 분출입니다.\n소설의 백미는 모든 기대를 걸었던 광산 사업(케이블카 설치)이 처참하게 무너져 내리는 순간입니다. 전 재산이 날아가고 사업이 파산한 그 절망적인 상황에서, 조르바는 화자에게 “함께 춤을 추자”고 제안합니다. 이는 자신의 운명을 단순히 견디는 것이 아니라, 비극조차 거대한 삶의 축제로 받아들이는 ‘아모르파티(Amor Fati)’의 완성입니다.\n\n\n3. 자유의지의 완성, 위버멘쉬\n\n\n\n어린아이의 단계: 유희와 긍정의 춤\n\n\n조르바는 이론으로 철학을 말하지 않습니다. 그는 배가 고프면 먹고, 사랑하고 싶으면 사랑하며, 슬프면 웁니다. 그의 모든 행동은 “인간은 자유로운가?”라는 질문에 대한 생생한 대답입니다. 니체가 꿈꿨던 초인(위버멘쉬)은 바로 이런 조르바처럼 과거의 후회와 미래의 불안을 끊어내고, 오직 현재라는 굴레 없는 바퀴 위에서 스스로 춤추는 존재입니다.\n\n\n\n\n마무리: 우리 안의 조르바를 깨워라\n카잔차키스의 묘비명에는 이런 글귀가 새겨져 있습니다. &gt; “나는 아무것도 바라지 않는다. 나는 아무것도 두려워하지 않는다. 나는 자유다.”\n조르바처럼 산다는 것은 무책임하게 산다는 뜻이 아닙니다. 내 삶의 주인으로서 그 어떤 외부의 압력에도 굴복하지 않고, 나의 운명을 온전히 사랑하며 현재를 살아가는 용기를 뜻합니다.\n오늘, 당신의 마음속에 잠자고 있는 사자를 깨우고, 어린아이처럼 순수한 기쁨의 춤을 춰보는 건 어떨까요? 조르바가 화자에게 그랬듯, 당신의 삶도 뜨거운 자유로 가득 차길 응원합니다.\n\n#그리스인조르바 #니체 #위버멘쉬 #아모르파티 #자유의지 #인생책추천 #고전독서 #책리뷰"
   },
   {
-    "objectID": "posts/stock-investment-for-progress/index.html",
-    "href": "posts/stock-investment-for-progress/index.html",
+    "objectID": "blog/posts/the-old-man-and-the-sea/index.html",
+    "href": "blog/posts/the-old-man-and-the-sea/index.html",
+    "title": "파괴될지언정 패배하지 않는 인간의 품격: 헤밍웨이 ‘노인과 바다’ 서평",
+    "section": "",
+    "text": "노인과 바다: 고독하지만 당당한 항해\n\n\n노력의 결실이 한순간에 뼈만 남은 채 사라진다면, 당신은 그것을 실패라고 부르겠습니까? 어니스트 헤밍웨이의 정수가 담긴 걸작 《노인과 바다》는 우리에게 승리와 패배의 정의를 다시 묻습니다. 84일간의 불운 끝에 마주한 거대한 청새치, 그리고 그 결실을 지키기 위한 고독한 사투. 오늘은 산티아고 노인의 삶을 통해 인간이 지켜내야 할 마지막 ’품격’에 대해 이야기해보려 합니다.\n\n핵심 요약: 바다 위에서 증명한 인간의 정의\n\n절제된 문장 속의 거대한 진실: 헤밍웨이의 ’빙산 이론’이 극명하게 드러나는 간결하고 힘 있는 서사.\n형제이자 적, 청새치와의 사투: 자연을 정복의 대상이 아닌, 경외와 존중을 담은 대결의 상대로 마주하는 태도.\n영적인 승리: 비록 손에는 뼈만 남았을지언정, 끝내 굴복하지 않은 인간 정신의 위대함.\n\n\n\n\n상세 분석: 산티아고가 지키려 했던 것은 무엇인가\n\n1. 하드보일드, 감정을 걷어낸 자리에 남은 의지\n\n\n\n먼 바다로 나가는 고독한 도전\n\n\n헤밍웨이는 불필요한 수식어를 배제하는 ‘하드보일드’ 문체의 대가입니다. 노인 산티아고의 고통을 묘사할 때도 그는 감상에 젖지 않습니다. 84일 동안 고기를 잡지 못해 ’살라오(최악의 불운)’라 불리는 상황에서도 노인은 묵묵히 낚싯줄을 정비합니다. 이러한 절제된 태도는 오히려 노인이 가진 내면의 단단함을 더욱 돋보이게 합니다. 운명을 한탄하는 대신, 자신이 해야 할 일을 정확히 수행하는 숙련된 어부의 자부심이야말로 그를 지탱하는 힘입니다.\n\n\n2. “나는 너를 사랑하고 존중한다”: 적과의 동료애\n\n\n\n거대한 물고기와의 치열한 사투\n\n\n노인은 자신을 사지로 몰아넣는 거대한 청새치를 향해 “형제여”라고 부릅니다. 이는 단순한 사냥꾼의 외침이 아닙니다. 자신을 한계까지 밀어붙이는 고난(청새치)을 증오하는 것이 아니라, 그 고귀한 생명력에 경의를 표하며 온 힘을 다해 맞서는 어부의 예우입니다. 노인에게 이 싸움은 상대를 죽이기 위한 도구가 아니라, 스스로가 인간으로서 얼마나 견딜 수 있는지, 얼마나 정당하게 투쟁할 수 있는지 증명하는 성스러운 의식과 같습니다.\n\n\n3. 뼈만 남은 귀환, 그러나 패배하지 않은 삶\n\n\n\n사자 꿈을 꾸며 맞이하는 평온한 아침\n\n\n상어 떼의 공격으로 청새치는 뼈만 남게 됩니다. 육체는 만신창이가 되었고 전유물은 사라졌습니다. 하지만 노인은 “인간은 파괴될지언정 패배하지 않는다”고 말합니다. 세상은 뼈의 크기로 성공을 가늠할지 모르지만, 헤밍웨이는 낚싯줄을 놓지 않았던 노인의 손바닥에 새겨진 굳은살에 집중합니다. 모든 것을 잃고 돌아와 다시 사자 꿈을 꾸는 노인의 모습은, 외부의 결과가 아닌 내면의 투쟁에서 승리한 자만이 누릴 수 있는 고귀한 평온을 보여줍니다.\n\n\n\n\n마무리: 당신의 바다에도 사자가 살고 있나요?\n우리의 삶 역시 거대한 바다와 같습니다. 때로는 수개월의 노력이 상어 떼(뜻밖의 시련)에 의해 순식간에 사라지기도 합니다. 하지만 산티아고 노인이 우리에게 남긴 유산은 명확합니다. 결과가 우리를 배신할지라도, 끝까지 품위를 잃지 않고 마주하는 그 과정 자체가 인간의 위대함이라는 사실입니다.\n오늘 하루, 당신이 지켜내려 했던 ’사자’와 같은 자부심은 무엇이었나요? 비록 눈앞의 결과가 뼈만 남았을지라도 실망하지 마세요. 당신은 여전히 파괴될 수 있으나, 결코 패배하지 않은 위엄 있는 존재입니다.\n\n#노인과바다 #헤밍웨이 #고전서평 #문학리뷰 #인생책추천 #인문학 #인간의존엄성 #하드보일드 #필독도서 #자기계발"
+  },
+  {
+    "objectID": "blog/posts/stock-investment-for-progress/search.html",
+    "href": "blog/posts/stock-investment-for-progress/search.html",
+    "title": "진보를 위한 주식투자 (이광수) 분석",
+    "section": "",
+    "text": "#이광수 #진보를위한주식투자 #주식투자철학 #경제적참여 #기업지배구조 #주권자투자 #성장주 #리서치 #알라딘추천 #교보문고베스트셀러\n\n\n\n\n\n왜 진보는 가난해야 하는가?\n\n이 질문은 책의 핵심을 관통합니다. 자본주의 시스템 내에서 진보적인 가치를 지키기 위해서는 오히려 자본을 이해하고 소유해야 한다는 역설적인 통찰입니다.\n투자는 단순히 돈을 불리는 행위가 아니라, 기업이라는 사회적 자산에 대한 목소리를 내는 주권 행위입니다.\n\n투자자의 주권과 경제 민주주의\n\n기업의 이익이 주주에게 올바르게 환원되고, 지배구조가 투명해질 때 시장은 진보합니다.\n개인 투자자가 ’주권자’로서 행동할 때 비로소 경제적 민주주의가 완성된다는 논지입니다.\n\n리뷰 분석 (알라딘/교보문고)\n\n“투자의 기술이 아닌 철학을 배우는 책”이라는 평가가 지배적입니다.\n“가치 투자와 사회적 기여를 동시에 고민하게 만드는 독보적인 서적”이라는 극찬이 많습니다.\n\n\n\n\n\n\n“green tree growing from money coins” (성장과 진보)\n“diverse people raising hands in meeting” (주권과 참여)\n“modern city skyline sunrise” (새로운 경제적 전망)"
+  },
+  {
+    "objectID": "blog/posts/stock-investment-for-progress/search.html#주요-키워드",
+    "href": "blog/posts/stock-investment-for-progress/search.html#주요-키워드",
+    "title": "진보를 위한 주식투자 (이광수) 분석",
+    "section": "",
+    "text": "#이광수 #진보를위한주식투자 #주식투자철학 #경제적참여 #기업지배구조 #주권자투자 #성장주 #리서치 #알라딘추천 #교보문고베스트셀러"
+  },
+  {
+    "objectID": "blog/posts/stock-investment-for-progress/search.html#핵심-분석-내용",
+    "href": "blog/posts/stock-investment-for-progress/search.html#핵심-분석-내용",
+    "title": "진보를 위한 주식투자 (이광수) 분석",
+    "section": "",
+    "text": "왜 진보는 가난해야 하는가?\n\n이 질문은 책의 핵심을 관통합니다. 자본주의 시스템 내에서 진보적인 가치를 지키기 위해서는 오히려 자본을 이해하고 소유해야 한다는 역설적인 통찰입니다.\n투자는 단순히 돈을 불리는 행위가 아니라, 기업이라는 사회적 자산에 대한 목소리를 내는 주권 행위입니다.\n\n투자자의 주권과 경제 민주주의\n\n기업의 이익이 주주에게 올바르게 환원되고, 지배구조가 투명해질 때 시장은 진보합니다.\n개인 투자자가 ’주권자’로서 행동할 때 비로소 경제적 민주주의가 완성된다는 논지입니다.\n\n리뷰 분석 (알라딘/교보문고)\n\n“투자의 기술이 아닌 철학을 배우는 책”이라는 평가가 지배적입니다.\n“가치 투자와 사회적 기여를 동시에 고민하게 만드는 독보적인 서적”이라는 극찬이 많습니다."
+  },
+  {
+    "objectID": "blog/posts/stock-investment-for-progress/search.html#이미지-검색-프롬프트",
+    "href": "blog/posts/stock-investment-for-progress/search.html#이미지-검색-프롬프트",
+    "title": "진보를 위한 주식투자 (이광수) 분석",
+    "section": "",
+    "text": "“green tree growing from money coins” (성장과 진보)\n“diverse people raising hands in meeting” (주권과 참여)\n“modern city skyline sunrise” (새로운 경제적 전망)"
+  },
+  {
+    "objectID": "blog/posts/stock-investment-for-progress/draft.html",
+    "href": "blog/posts/stock-investment-for-progress/draft.html",
     "title": "왜 진보는 가난해야 하는가? : 이광수의 ‘진보를 위한 주식투자’",
     "section": "",
-    "text": "왜 진보는 가난해야 하는가? : 이광수의 ‘진보를 위한 주식투자’\n\n\n“왜 진보는 가난해야 하는가?”\n이 도발적인 질문은 이광수 작가가 우리 사회에 던지는 묵직한 화두입니다. 우리는 흔히 ’진보’라고 하면 자본주의에 비판적이고, 소박한 삶을 지향하며, 자본 시장과는 거리가 먼 이미지를 떠올리곤 합니다. 하지만 이광수 작가는 정반대로 말합니다. 진보적인 가치를 지키고 세상을 더 나은 방향으로 바꾸고 싶을수록, 우리는 자본을 이해하고 주식 시장에 참여해야 한다고 말이죠. 오늘은 투자라는 행위를 ’주권자의 참여’로 재정의한 독보적인 투자서, 《진보를 위한 주식투자》를 살펴보겠습니다.\n\n핵심 요약: 투자는 돈이 아닌 세상을 버는 행위\n\n투자는 주권 행위다: 투자는 단순히 시세 차익을 노리는 도박이 아니라, 기업의 의사결정에 참여하고 사회적 자원을 배분하는 민주주의적 권리입니다.\n기업의 지배구조와 투명성: 기업의 이익이 주주에게 올바르게 환원되는 ’경제적 정의’가 실현될 때 자본주의는 진보합니다.\n성장에 투자하라: 혁신을 통해 세상을 이롭게 만드는 기업을 찾아내고 그 성장에 동참하는 것이 진정한 가치 투자입니다.\n\n\n\n\n상세 분석: 자본가로서의 주권자를 꿈꾸다\n\n1. 자본주의 시스템 안에서의 진보적 삶\n\n\n\n자본의 성장이 곧 사회의 진보로 이어지는 길\n\n\n이 책은 투자 기술을 가르치기 전에 ’투자자의 태도’를 묻습니다. 많은 진보적 인사들이 자본 시장을 탐욕의 공간으로만 치부하며 외면할 때, 실제 세상의 부는 왜곡된 방식으로 소수에게 집중되었습니다. 작가는 묻습니다. “왜 진보는 가난해야 하는가?” 우리가 시장을 외면하는 동안 기업의 지배구조는 불투명해졌고 주주의 권리는 무시되었습니다. 이제는 진보적 가치를 가진 이들이 적극적으로 주식을 소유함으로써, 기업이 사회적 책임을 다하고 이익을 공정하게 나누도록 감시하고 참여해야 합니다.\n\n\n2. 주권자로서의 투자와 경제 민주주의\n\n\n\n참여하는 주주가 세상을 바꿉니다\n\n\n이광수 작가가 강조하는 투자의 핵심은 ’거버넌스(지배구조)’입니다. 대한민국 주식 시장이 저평가받는 ’코리아 디스카운트’의 원인을 그는 불투명한 기업 운영과 주주 경시 풍조에서 찾습니다. 투자자가 단순히 가격 변동에 일희일비하는 ’매매자’가 아니라, 기업의 주인으로서 제 목소리를 내는 ’주주’가 될 때 시장의 체질이 바뀝니다. 이것이 바로 투자를 통한 경제적 민주주의의 실현입니다.\n\n\n3. 미래의 가치와 성장에 집중하는 통찰\n\n\n\n지속적인 학습과 리서치를 통한 통찰의 시간\n\n\n알라딘과 교보문고의 수많은 독자가 이 책에 열광한 이유는 ’공부하는 투자’의 즐거움을 일깨워주기 때문입니다. 작가는 차트를 보는 기술보다 세상을 읽는 리서치를 강조합니다. 어떤 기술이 인류의 삶을 개선하고 있는가? 어떤 기업이 그 변화를 주도하고 있는가? 이러한 질문에 답을 찾아가는 과정 자체가 진보적인 투자자가 걸어가야 할 길입니다. 세상을 이롭게 하는 성장에 내 자본을 보태고 그 결실을 함께 나누는 것, 그것이 이 책이 말하는 ’진보적 투자’의 완성입니다.\n\n\n\n\n마무리: 당신의 자본에는 어떤 의지가 담겨 있습니까?\n투자는 투표와 같습니다. 내가 산 주식 한 주에는 ’이런 기업이 우리 사회에 더 많아졌으면 좋겠다’는 지지와 응원이 담겨 있어야 합니다. 돈을 버는 것은 그 올바른 선택에 따라오는 자연스러운 결과일 뿐입니다.\n더 이상 “왜 진보는 가난해야 하는가”라는 질문에 고개를 숙이지 마세요. 여러분의 투자가 기업을 투명하게 만들고, 혁신을 응원하며, 사회적 부를 공정하게 나누는 강력한 도구가 되길 바랍니다. 오늘부터 당신도 세상을 바꾸는 ’주권자 투자자’로 거듭나보는 건 어떨까요?\n\n#이광수 #진보를위한주식투자 #주식투자철학 #경제적자유 #가치투자 #책리뷰 #경제민주주의 #베스트셀러 #재테크독서 #주권자투자"
+    "text": "왜 진보는 가난해야 하는가? : 이광수의 ‘진보를 위한 주식투자’\n“왜 진보는 가난해야 하는가?”\n이 도발적인 질문은 이광수 작가가 우리 사회에 던지는 묵직한 화두입니다. 우리는 흔히 ’진보’라고 하면 자본주의에 비판적이고, 소박한 삶을 지향하며, 자본 시장과는 거리가 먼 이미지를 떠올리곤 합니다. 하지만 이광수 작가는 정반대로 말합니다. 진보적인 가치를 지키고 세상을 더 나은 방향으로 바꾸고 싶을수록, 우리는 자본을 이해하고 주식 시장에 참여해야 한다고 말이죠. 오늘은 투자라는 행위를 ’주권자의 참여’로 재정의한 독보적인 투자서, 《진보를 위한 주식투자》를 살펴보겠습니다.\n\n핵심 요약: 투자는 돈이 아닌 세상을 버는 행위\n\n투자는 주권 행위다: 투자는 단순히 시세 차익을 노리는 도박이 아니라, 기업의 의사결정에 참여하고 사회적 자원을 배분하는 민주주의적 권리입니다.\n기업의 지배구조와 투명성: 기업의 이익이 주주에게 올바르게 환원되는 ’경제적 정의’가 실현될 때 자본주의는 진보합니다.\n성장에 투자하라: 혁신을 통해 세상을 이롭게 만드는 기업을 찾아내고 그 성장에 동참하는 것이 진정한 가치 투자입니다.\n\n\n\n\n상세 분석: 자본가로서의 주권자를 꿈꾸다\n\n1. 자본주의 시스템 안에서의 진보적 삶\n\n\n\n자본의 성장이 곧 사회의 진보로 이어지는 길\n\n\n이 책은 투자 기술을 가르치기 전에 ’투자자의 태도’를 묻습니다. 많은 진보적 인사들이 자본 시장을 탐욕의 공간으로만 치부하며 외면할 때, 실제 세상의 부는 왜곡된 방식으로 소수에게 집중되었습니다. 작가는 묻습니다. “왜 진보는 가난해야 하는가?” 우리가 시장을 외면하는 동안 기업의 지배구조는 불투명해졌고 주주의 권리는 무시되었습니다. 이제는 진보적 가치를 가진 이들이 적극적으로 주식을 소유함으로써, 기업이 사회적 책임을 다하고 이익을 공정하게 나누도록 감시하고 참여해야 합니다.\n\n\n2. 주권자로서의 투자와 경제 민주주의\n\n\n\n참여하는 주주가 세상을 바꿉니다\n\n\n이광수 작가가 강조하는 투자의 핵심은 ’거버넌스(지배구조)’입니다. 대한민국 주식 시장이 저평가받는 ’코리아 디스카운트’의 원인을 그는 불투명한 기업 운영과 주주 경시 풍조에서 찾습니다. 투자자가 단순히 가격 변동에 일희일비하는 ’매매자’가 아니라, 기업의 주인으로서 제 목소리를 내는 ’주주’가 될 때 시장의 체질이 바뀝니다. 이것이 바로 투자를 통한 경제적 민주주의의 실현입니다.\n\n\n3. 미래의 가치와 성장에 집중하는 통찰\n\n\n\n지속적인 학습과 리서치를 통한 통찰의 시간\n\n\n알라딘과 교보문고의 수많은 독자가 이 책에 열광한 이유는 ’공부하는 투자’의 즐거움을 일깨워주기 때문입니다. 작가는 차트를 보는 기술보다 세상을 읽는 리서치를 강조합니다. 어떤 기술이 인류의 삶을 개선하고 있는가? 어떤 기업이 그 변화를 주도하고 있는가? 이러한 질문에 답을 찾아가는 과정 자체가 진보적인 투자자가 걸어가야 할 길입니다. 세상을 이롭게 하는 성장에 내 자본을 보태고 그 결실을 함께 나누는 것, 그것이 이 책이 말하는 ’진보적 투자’의 완성입니다.\n\n\n\n\n마무리: 당신의 자본에는 어떤 의지가 담겨 있습니까?\n투자는 투표와 같습니다. 내가 산 주식 한 주에는 ’이런 기업이 우리 사회에 더 많아졌으면 좋겠다’는 지지와 응원이 담겨 있어야 합니다. 돈을 버는 것은 그 올바른 선택에 따라오는 자연스러운 결과일 뿐입니다.\n더 이상 “왜 진보는 가난해야 하는가”라는 질문에 고개를 숙이지 마세요. 여러분의 투자가 기업을 투명하게 만들고, 혁신을 응원하며, 사회적 부를 공정하게 나누는 강력한 도구가 되길 바랍니다. 오늘부터 당신도 세상을 바꾸는 ’주권자 투자자’로 거듭나보는 건 어떨까요?\n\n#이광수 #진보를위한주식투자 #주식투자철학 #경제적자유 #가치투자 #책리뷰 #경제민주주의 #베스트셀러 #재테크독서 #주권자투자"
+  },
+  {
+    "objectID": "blog/index.html#사색의-방에-오신-것을-환영합니다",
+    "href": "blog/index.html#사색의-방에-오신-것을-환영합니다",
+    "title": "사색의 서재",
+    "section": "🏛️ 사색의 방에 오신 것을 환영합니다",
+    "text": "🏛️ 사색의 방에 오신 것을 환영합니다\n이곳은 세상의 소음에서 벗어나 오직 텍스트와 당신만이 대화하는 침묵의 공간입니다. 우리는 유행하는 지식이 아닌, 시간을 견뎌낸 클래식과 사유의 깊이를 더해주는 현대의 문장들을 큐레이션합니다.\n어두운 조명 아래, 당신의 인생을 비출 등불 같은 한 권의 책을 찾아보세요."
+  },
+  {
+    "objectID": "blog/about.html",
+    "href": "blog/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Gemini API와 Quarto를 활용한 자동 도서 리뷰 시스템입니다."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "사색의 서재",
+    "objectID": "blog/GEMINI.html",
+    "href": "blog/GEMINI.html",
+    "title": "AI 도서 리뷰 블로그",
     "section": "",
-    "text": "이곳은 세상의 소음에서 벗어나 오직 텍스트와 당신만이 대화하는 침묵의 공간입니다. 우리는 유행하는 지식이 아닌, 시간을 견뎌낸 클래식과 사유의 깊이를 더해주는 현대의 문장들을 큐레이션합니다.\n어두운 조명 아래, 당신의 인생을 비출 등불 같은 한 권의 책을 찾아보세요."
+    "text": "모든 블로그 포스트는 독서인들을 타겟으로 한 SEO(검색엔진 최적화) 전략을 바탕으로 작성됩니다.\n주의: ‘참고 자료’ 섹션과 ‘AI 작성’ 문구는 절대 포함하지 않습니다.\n\n\n\n\nposts/ 디렉터리에 핵심 키워드(영문)를 이름으로 한 폴더를 생성합니다.\n\n예시: posts/the-great-gatsby\n\n\n\n\n\n\nGoogle Search를 사용하여 도서의 심층 정보와 실제 독자들의 반응을 수집합니다.\n독서인들이 검색할 만한 주요 키워드(예: #인생책추천, #베스트셀러리뷰, #깊이있는서평)를 도출하여 search.md에 정리합니다.\n\n\n\n\n\ngoogle_web_search를 사용하여 해당 도서의 실제 표지나 가장 잘 어울리는 예술적 이미지를 찾습니다.\n수집된 이미지 중 가장 적합한 것을 thumbnail.jpg로 저장합니다. (이미지 생성 도구 대신 실제 이미지를 우선시함)\n\n\n\n\n\n글의 구조:\n\n도입: 독자의 공감을 이끌어내는 문장과 SEO 키워드가 포함된 인사이트 있는 질문.\n핵심 요약: 책의 정수를 담은 3가지 포인트.\n상세 분석: 깊이 있는 해석과 실제 삶에 적용할 수 있는 부분들을 상세히 설명.\n마무리: 독자에게 여운을 남기는 문장과 행동 유도(CTA).\n\n금지 사항: 참고 자료 리스트, AI 작성 관련 언급 일체 금지.\n\n\n\n\n\ntools/fetch_pixabay.py 스크립트를 사용하여 도서 주제와 어울리는 고화질 이미지 3~5개를 수집합니다.\n\n예: python tools/fetch_pixabay.py \"lion\" posts/folder/1.png\n\n수집된 이미지는 1.png, 2.png 등으로 저장하며, 서평의 각 문맥에 맞춰 자연스럽게 배치합니다.\n\n\n\n\n\n헤더 설정: embed-resources: true, description 필드 작성, categories: [고전, ...] 설정.\n본문 하단: SEO용 해시태그(#키워드) 리스트를 추가합니다.\n주의: _quarto.yml의 render 설정을 통해 index.qmd만 HTML로 변환되도록 관리합니다. (draft.md, search.md 등은 배포에서 제외)\n\n\n\n\n\nquarto render 명령으로 docs/ 폴더에 결과물을 생성합니다.\n생성된 docs/의 모든 내용을 배포용 저장소(D:/blog/b_blog)로 복사합니다.\n\npowershell -Command \"Copy-Item -Path docs\\* -Destination ../b_blog -Recurse -Force\"\n\n배포 저장소에서 Git 커밋 및 푸시를 진행합니다."
   },
   {
-    "objectID": "index.html#사색의-방에-오신-것을-환영합니다",
-    "href": "index.html#사색의-방에-오신-것을-환영합니다",
-    "title": "사색의 서재",
+    "objectID": "blog/GEMINI.html#블로그-생성-가이드라인-seo-최적화-버전",
+    "href": "blog/GEMINI.html#블로그-생성-가이드라인-seo-최적화-버전",
+    "title": "AI 도서 리뷰 블로그",
     "section": "",
-    "text": "이곳은 세상의 소음에서 벗어나 오직 텍스트와 당신만이 대화하는 침묵의 공간입니다. 우리는 유행하는 지식이 아닌, 시간을 견뎌낸 클래식과 사유의 깊이를 더해주는 현대의 문장들을 큐레이션합니다.\n어두운 조명 아래, 당신의 인생을 비출 등불 같은 한 권의 책을 찾아보세요."
+    "text": "모든 블로그 포스트는 독서인들을 타겟으로 한 SEO(검색엔진 최적화) 전략을 바탕으로 작성됩니다.\n주의: ‘참고 자료’ 섹션과 ‘AI 작성’ 문구는 절대 포함하지 않습니다.\n\n\n\n\nposts/ 디렉터리에 핵심 키워드(영문)를 이름으로 한 폴더를 생성합니다.\n\n예시: posts/the-great-gatsby\n\n\n\n\n\n\nGoogle Search를 사용하여 도서의 심층 정보와 실제 독자들의 반응을 수집합니다.\n독서인들이 검색할 만한 주요 키워드(예: #인생책추천, #베스트셀러리뷰, #깊이있는서평)를 도출하여 search.md에 정리합니다.\n\n\n\n\n\ngoogle_web_search를 사용하여 해당 도서의 실제 표지나 가장 잘 어울리는 예술적 이미지를 찾습니다.\n수집된 이미지 중 가장 적합한 것을 thumbnail.jpg로 저장합니다. (이미지 생성 도구 대신 실제 이미지를 우선시함)\n\n\n\n\n\n글의 구조:\n\n도입: 독자의 공감을 이끌어내는 문장과 SEO 키워드가 포함된 인사이트 있는 질문.\n핵심 요약: 책의 정수를 담은 3가지 포인트.\n상세 분석: 깊이 있는 해석과 실제 삶에 적용할 수 있는 부분들을 상세히 설명.\n마무리: 독자에게 여운을 남기는 문장과 행동 유도(CTA).\n\n금지 사항: 참고 자료 리스트, AI 작성 관련 언급 일체 금지.\n\n\n\n\n\ntools/fetch_pixabay.py 스크립트를 사용하여 도서 주제와 어울리는 고화질 이미지 3~5개를 수집합니다.\n\n예: python tools/fetch_pixabay.py \"lion\" posts/folder/1.png\n\n수집된 이미지는 1.png, 2.png 등으로 저장하며, 서평의 각 문맥에 맞춰 자연스럽게 배치합니다.\n\n\n\n\n\n헤더 설정: embed-resources: true, description 필드 작성, categories: [고전, ...] 설정.\n본문 하단: SEO용 해시태그(#키워드) 리스트를 추가합니다.\n주의: _quarto.yml의 render 설정을 통해 index.qmd만 HTML로 변환되도록 관리합니다. (draft.md, search.md 등은 배포에서 제외)\n\n\n\n\n\nquarto render 명령으로 docs/ 폴더에 결과물을 생성합니다.\n생성된 docs/의 모든 내용을 배포용 저장소(D:/blog/b_blog)로 복사합니다.\n\npowershell -Command \"Copy-Item -Path docs\\* -Destination ../b_blog -Recurse -Force\"\n\n배포 저장소에서 Git 커밋 및 푸시를 진행합니다."
   },
   {
-    "objectID": "posts/demian/index.html",
-    "href": "posts/demian/index.html",
+    "objectID": "blog/posts/demian/index.html",
+    "href": "blog/posts/demian/index.html",
     "title": "🕯️ 내 안의 아브락사스를 찾아서: 헤르만 헤세 ‘데미안’ 심층 서평",
     "section": "",
     "text": "데미안 표지"
   },
   {
-    "objectID": "posts/demian/index.html#내-속에서-솟아-나오려는-것-바로-그것을-살아보려-했다",
-    "href": "posts/demian/index.html#내-속에서-솟아-나오려는-것-바로-그것을-살아보려-했다",
+    "objectID": "blog/posts/demian/index.html#내-속에서-솟아-나오려는-것-바로-그것을-살아보려-했다",
+    "href": "blog/posts/demian/index.html#내-속에서-솟아-나오려는-것-바로-그것을-살아보려-했다",
     "title": "🕯️ 내 안의 아브락사스를 찾아서: 헤르만 헤세 ‘데미안’ 심층 서평",
     "section": "“내 속에서 솟아 나오려는 것, 바로 그것을 살아보려 했다”",
     "text": "“내 속에서 솟아 나오려는 것, 바로 그것을 살아보려 했다”\n누구나 가슴 속에 품고 있지만, 차마 입 밖으로 내뱉지 못하는 질문이 있습니다. “나는 지금 정말 ’나’로 살고 있는가?”\n헤르만 헤세의 걸작 『데미안』은 100년이 넘는 시간 동안 수많은 독자에게 이 묵직한 질문을 던져왔습니다. 소년 싱클레어가 알이라는 견고한 세계를 깨고 날아오르기까지의 과정은, 단순히 한 개인의 성장담을 넘어 우리 모두가 겪어내야 할 ‘자기 자신에게 이르는 길’에 대한 치열한 기록입니다.\n\n\n\n어두운 세계와 밝은 세계의 경계\n\n\n\n🌓 두 세계의 균열: 밝음과 어둠 사이에서\n싱클레어의 유년은 부모님의 품 안에서 ’밝고 선한 세계’에 머물러 있었습니다. 하지만 프란츠 크로머라는 어둠의 그림자를 만나는 순간, 그 견고했던 세계는 균열을 일으키기 시작합니다.\n우리는 흔히 성장을 ’더 나은 사람이 되는 것’이라 생각하지만, 헤세는 다르게 말합니다. 진정한 성장은 내가 믿어왔던 완벽한 세계의 허구를 인식하고, 그 너머에 존재하는 불편한 진실과 마주하는 고통스러운 과정이라고요. 유년기의 절대적 권위였던 ’아버지의 세계’를 파괴하는 것, 그것이 바로 자아를 향한 첫 번째 발걸음입니다.\n\n\n🦅 아브락사스: 선과 악의 이분법을 넘어\n『데미안』에서 가장 매혹적인 상징은 단연 ‘아브락사스(Abraxas)’입니다. 신이면서 동시에 악마인 존재. 선과 악, 빛과 어둠이라는 이분법적 사고에 갇혀 있던 싱클레어에게 데미안이 제시한 이 상징은 가히 혁명적입니다.\n\n“새는 알에서 나오려고 투쟁한다. 알은 세계이다. 태어나려는 자는 하나의 세계를 깨뜨려야 한다. 새는 신에게로 날아간다. 신의 이름은 아브락사스.”\n\n\n\n\n내면을 들여다보는 고독한 시간\n\n\n우리는 왜 내 안의 어둠과 욕망을 부끄러워하며 숨기려만 할까요? 헤세는 아브락사스를 통해 우리에게 말합니다. 우리의 상처, 실수, 그리고 남들에게 보여주고 싶지 않은 어두운 면까지도 온전히 긍정하고 통합할 때 비로소 우리는 하나의 온전한 자아로 거듭날 수 있다고요.\n\n\n⚔️ 카인의 표적: 깨어 있는 자의 긍지\n성경 속 카인은 동생을 죽인 죄인이지만, 데미안의 해석에 따르면 그는 ’남다른 지성과 용기’를 가진 자입니다. 남들과 다르다는 이유로 배척받는 이들, 기존의 질서에 의문을 제기하는 이들에게 새겨진 ’카인의 표적’은 저주가 아닌 선택받은 자의 긍지입니다.\n타인의 시선과 사회의 기대에 맞추어 사는 삶은 편안할지 모릅니다. 하지만 그 안락함을 파괴하고 고독한 길을 선택한 이들에게만 허락되는 보물이 있습니다. 바로 ’나라는 존재의 주인’이 되는 경험입니다.\n\n\n\n새로운 세계로의 비상\n\n\n\n\n🕯️ 마무리하며: 당신의 길은 아름답지 않았나요?\n소설의 끝에서 에바 부인이 건네는 질문은 우리의 마음을 울립니다. 자아를 찾아가는 그 험난한 길이 과연 어렵기만 했느냐고, 그 과정 자체가 아름답지는 않았느냐고 말입니다.\n인생의 전환점마다 우리는 다시 『데미안』을 펼쳐 들게 됩니다. 그럴 때마다 헤세는 다정한 필체로 우리를 다독여줍니다. 당신이 지금 겪고 있는 알을 깨는 고통은 당신이 살아있으며, 더 넓은 하늘로 날아오르기 위한 준비를 마쳤다는 가장 확실한 증거라고요.\n여러분의 내면에서는 지금 어떤 새가 알을 두드리고 있나요? 그 고독한 두드림에 가만히 귀를 기울여보세요.\n\n#데미안 #헤르만헤세 #자아성찰 #성장소설 #아브락사스 #인생고전 #책리뷰 #고전독서\n\n사색의 서재에서, 당신의 깊은 독서를 응원합니다."
   },
   {
-    "objectID": "posts/the-old-man-and-the-sea/index.html",
-    "href": "posts/the-old-man-and-the-sea/index.html",
-    "title": "파괴될지언정 패배하지 않는 인간의 품격: 헤밍웨이 ‘노인과 바다’ 서평",
+    "objectID": "blog/posts/stock-investment-for-progress/index.html",
+    "href": "blog/posts/stock-investment-for-progress/index.html",
+    "title": "왜 진보는 가난해야 하는가? : 이광수의 ‘진보를 위한 주식투자’",
     "section": "",
-    "text": "노인과 바다: 고독하지만 당당한 항해\n\n\n노력의 결실이 한순간에 뼈만 남은 채 사라진다면, 당신은 그것을 실패라고 부르겠습니까? 어니스트 헤밍웨이의 정수가 담긴 걸작 《노인과 바다》는 우리에게 승리와 패배의 정의를 다시 묻습니다. 84일간의 불운 끝에 마주한 거대한 청새치, 그리고 그 결실을 지키기 위한 고독한 사투. 오늘은 산티아고 노인의 삶을 통해 인간이 지켜내야 할 마지막 ’품격’에 대해 이야기해보려 합니다.\n\n핵심 요약: 바다 위에서 증명한 인간의 정의\n\n절제된 문장 속의 거대한 진실: 헤밍웨이의 ’빙산 이론’이 극명하게 드러나는 간결하고 힘 있는 서사.\n형제이자 적, 청새치와의 사투: 자연을 정복의 대상이 아닌, 경외와 존중을 담은 대결의 상대로 마주하는 태도.\n영적인 승리: 비록 손에는 뼈만 남았을지언정, 끝내 굴복하지 않은 인간 정신의 위대함.\n\n\n\n\n상세 분석: 산티아고가 지키려 했던 것은 무엇인가\n\n1. 하드보일드, 감정을 걷어낸 자리에 남은 의지\n\n\n\n먼 바다로 나가는 고독한 도전\n\n\n헤밍웨이는 불필요한 수식어를 배제하는 ‘하드보일드’ 문체의 대가입니다. 노인 산티아고의 고통을 묘사할 때도 그는 감상에 젖지 않습니다. 84일 동안 고기를 잡지 못해 ’살라오(최악의 불운)’라 불리는 상황에서도 노인은 묵묵히 낚싯줄을 정비합니다. 이러한 절제된 태도는 오히려 노인이 가진 내면의 단단함을 더욱 돋보이게 합니다. 운명을 한탄하는 대신, 자신이 해야 할 일을 정확히 수행하는 숙련된 어부의 자부심이야말로 그를 지탱하는 힘입니다.\n\n\n2. “나는 너를 사랑하고 존중한다”: 적과의 동료애\n\n\n\n거대한 물고기와의 치열한 사투\n\n\n노인은 자신을 사지로 몰아넣는 거대한 청새치를 향해 “형제여”라고 부릅니다. 이는 단순한 사냥꾼의 외침이 아닙니다. 자신을 한계까지 밀어붙이는 고난(청새치)을 증오하는 것이 아니라, 그 고귀한 생명력에 경의를 표하며 온 힘을 다해 맞서는 어부의 예우입니다. 노인에게 이 싸움은 상대를 죽이기 위한 도구가 아니라, 스스로가 인간으로서 얼마나 견딜 수 있는지, 얼마나 정당하게 투쟁할 수 있는지 증명하는 성스러운 의식과 같습니다.\n\n\n3. 뼈만 남은 귀환, 그러나 패배하지 않은 삶\n\n\n\n사자 꿈을 꾸며 맞이하는 평온한 아침\n\n\n상어 떼의 공격으로 청새치는 뼈만 남게 됩니다. 육체는 만신창이가 되었고 전유물은 사라졌습니다. 하지만 노인은 “인간은 파괴될지언정 패배하지 않는다”고 말합니다. 세상은 뼈의 크기로 성공을 가늠할지 모르지만, 헤밍웨이는 낚싯줄을 놓지 않았던 노인의 손바닥에 새겨진 굳은살에 집중합니다. 모든 것을 잃고 돌아와 다시 사자 꿈을 꾸는 노인의 모습은, 외부의 결과가 아닌 내면의 투쟁에서 승리한 자만이 누릴 수 있는 고귀한 평온을 보여줍니다.\n\n\n\n\n마무리: 당신의 바다에도 사자가 살고 있나요?\n우리의 삶 역시 거대한 바다와 같습니다. 때로는 수개월의 노력이 상어 떼(뜻밖의 시련)에 의해 순식간에 사라지기도 합니다. 하지만 산티아고 노인이 우리에게 남긴 유산은 명확합니다. 결과가 우리를 배신할지라도, 끝까지 품위를 잃지 않고 마주하는 그 과정 자체가 인간의 위대함이라는 사실입니다.\n오늘 하루, 당신이 지켜내려 했던 ’사자’와 같은 자부심은 무엇이었나요? 비록 눈앞의 결과가 뼈만 남았을지라도 실망하지 마세요. 당신은 여전히 파괴될 수 있으나, 결코 패배하지 않은 위엄 있는 존재입니다.\n\n#노인과바다 #헤밍웨이 #고전서평 #문학리뷰 #인생책추천 #인문학 #인간의존엄성 #하드보일드 #필독도서 #자기계발"
+    "text": "왜 진보는 가난해야 하는가? : 이광수의 ‘진보를 위한 주식투자’\n\n\n“왜 진보는 가난해야 하는가?”\n이 도발적인 질문은 이광수 작가가 우리 사회에 던지는 묵직한 화두입니다. 우리는 흔히 ’진보’라고 하면 자본주의에 비판적이고, 소박한 삶을 지향하며, 자본 시장과는 거리가 먼 이미지를 떠올리곤 합니다. 하지만 이광수 작가는 정반대로 말합니다. 진보적인 가치를 지키고 세상을 더 나은 방향으로 바꾸고 싶을수록, 우리는 자본을 이해하고 주식 시장에 참여해야 한다고 말이죠. 오늘은 투자라는 행위를 ’주권자의 참여’로 재정의한 독보적인 투자서, 《진보를 위한 주식투자》를 살펴보겠습니다.\n\n핵심 요약: 투자는 돈이 아닌 세상을 버는 행위\n\n투자는 주권 행위다: 투자는 단순히 시세 차익을 노리는 도박이 아니라, 기업의 의사결정에 참여하고 사회적 자원을 배분하는 민주주의적 권리입니다.\n기업의 지배구조와 투명성: 기업의 이익이 주주에게 올바르게 환원되는 ’경제적 정의’가 실현될 때 자본주의는 진보합니다.\n성장에 투자하라: 혁신을 통해 세상을 이롭게 만드는 기업을 찾아내고 그 성장에 동참하는 것이 진정한 가치 투자입니다.\n\n\n\n\n상세 분석: 자본가로서의 주권자를 꿈꾸다\n\n1. 자본주의 시스템 안에서의 진보적 삶\n\n\n\n자본의 성장이 곧 사회의 진보로 이어지는 길\n\n\n이 책은 투자 기술을 가르치기 전에 ’투자자의 태도’를 묻습니다. 많은 진보적 인사들이 자본 시장을 탐욕의 공간으로만 치부하며 외면할 때, 실제 세상의 부는 왜곡된 방식으로 소수에게 집중되었습니다. 작가는 묻습니다. “왜 진보는 가난해야 하는가?” 우리가 시장을 외면하는 동안 기업의 지배구조는 불투명해졌고 주주의 권리는 무시되었습니다. 이제는 진보적 가치를 가진 이들이 적극적으로 주식을 소유함으로써, 기업이 사회적 책임을 다하고 이익을 공정하게 나누도록 감시하고 참여해야 합니다.\n\n\n2. 주권자로서의 투자와 경제 민주주의\n\n\n\n참여하는 주주가 세상을 바꿉니다\n\n\n이광수 작가가 강조하는 투자의 핵심은 ’거버넌스(지배구조)’입니다. 대한민국 주식 시장이 저평가받는 ’코리아 디스카운트’의 원인을 그는 불투명한 기업 운영과 주주 경시 풍조에서 찾습니다. 투자자가 단순히 가격 변동에 일희일비하는 ’매매자’가 아니라, 기업의 주인으로서 제 목소리를 내는 ’주주’가 될 때 시장의 체질이 바뀝니다. 이것이 바로 투자를 통한 경제적 민주주의의 실현입니다.\n\n\n3. 미래의 가치와 성장에 집중하는 통찰\n\n\n\n지속적인 학습과 리서치를 통한 통찰의 시간\n\n\n알라딘과 교보문고의 수많은 독자가 이 책에 열광한 이유는 ’공부하는 투자’의 즐거움을 일깨워주기 때문입니다. 작가는 차트를 보는 기술보다 세상을 읽는 리서치를 강조합니다. 어떤 기술이 인류의 삶을 개선하고 있는가? 어떤 기업이 그 변화를 주도하고 있는가? 이러한 질문에 답을 찾아가는 과정 자체가 진보적인 투자자가 걸어가야 할 길입니다. 세상을 이롭게 하는 성장에 내 자본을 보태고 그 결실을 함께 나누는 것, 그것이 이 책이 말하는 ’진보적 투자’의 완성입니다.\n\n\n\n\n마무리: 당신의 자본에는 어떤 의지가 담겨 있습니까?\n투자는 투표와 같습니다. 내가 산 주식 한 주에는 ’이런 기업이 우리 사회에 더 많아졌으면 좋겠다’는 지지와 응원이 담겨 있어야 합니다. 돈을 버는 것은 그 올바른 선택에 따라오는 자연스러운 결과일 뿐입니다.\n더 이상 “왜 진보는 가난해야 하는가”라는 질문에 고개를 숙이지 마세요. 여러분의 투자가 기업을 투명하게 만들고, 혁신을 응원하며, 사회적 부를 공정하게 나누는 강력한 도구가 되길 바랍니다. 오늘부터 당신도 세상을 바꾸는 ’주권자 투자자’로 거듭나보는 건 어떨까요?\n\n#이광수 #진보를위한주식투자 #주식투자철학 #경제적자유 #가치투자 #책리뷰 #경제민주주의 #베스트셀러 #재테크독서 #주권자투자"
+  },
+  {
+    "objectID": "blog/posts/the-old-man-and-the-sea/draft.html",
+    "href": "blog/posts/the-old-man-and-the-sea/draft.html",
+    "title": "파괴될지언정 패배하지 않는 인간: 《노인과 바다》와 니체의 아모르파티",
+    "section": "",
+    "text": "파괴될지언정 패배하지 않는 인간: 《노인과 바다》와 니체의 아모르파티\n노력의 결과가 허무하게 사라졌을 때, 당신은 다시 일어설 수 있나요? 평생을 바친 성과가 한순간에 물거품이 되었을 때, 우리는 흔히 세상과 운명을 원망하곤 합니다. 하지만 여기, 뼈만 남은 물고기를 끌고 돌아오면서도 사자 꿈을 꾸는 한 노인이 있습니다. 어니스트 헤밍웨이의 걸작 《노인과 바다》의 주인공 산티아고입니다. 오늘은 그의 불굴의 사투를 니체의 철학적 시선인 ’아모르파티(운명애)’와 ’위버멘쉬’를 통해 재해석해 보겠습니다.\n\n핵심 요약: 불운조차 사랑한 노인의 투쟁\n\n84일간의 침묵과 아모르파티: 고기가 잡히지 않는 절망적인 운명을 거부하지 않고, 매일 새벽 다시 바다로 나가는 긍정의 힘.\n청새치와의 사투: 자신의 한계를 시험하고 존재의 고귀함을 증명하는 위버멘쉬(초인)의 의지.\n뼈만 남은 승리: 결과물보다 투쟁의 과정 자체를 사랑하며, 패배를 거부하는 인간 정신의 완성.\n\n\n\n\n상세 분석: 산티아고 노인이 보여주는 니체적 삶\n\n1. 운명을 긍정하는 자, 아모르파티(Amor Fati)\n노인 산티아고는 84일 동안 고기를 단 한 마리도 잡지 못했습니다. 마을 사람들은 그를 ’살라오(salao, 지독하게 운이 없는 사람)’라고 부르며 멀리합니다. 하지만 노인은 자신의 불운을 탓하거나 비굴해지지 않습니다. 그는 담담하게 85일째의 바다로 나갑니다. 이는 니체가 말한 “너의 운명을 사랑하라”는 아모르파티의 실천입니다. 그에게 바다는 정복의 대상이 아니라, 자신의 삶이 펼쳐지는 거대한 무대이자 운명 그 자체이기 때문입니다.\n\n\n2. 파괴될지언정 패배하지 않는 위버멘쉬(Übermensch)\n사흘 밤낮을 이어지는 거대한 청새치와의 사투에서 노인은 극심한 통증과 환각에 시달립니다. 하지만 그는 굴복하지 않습니다. “인간은 파괴될지언정 패배하지 않는다”는 그의 독백은 니체의 초인 철학을 가장 잘 요약한 문장입니다. 초인이란 고통이 없는 삶을 사는 사람이 아니라, 고통을 발판 삼아 끊임없이 자신을 극복해 나가는 자입니다. 노인은 물고기와의 싸움을 통해 자신이 여전히 살아있으며, 여전히 ’위대한 산티아고’임을 증명합니다.\n\n\n3. 결과를 초월한 어린아이의 유희\n상어 떼에게 고기를 다 뜯기고 뼈만 남은 채 돌아왔을 때, 노인은 절망에 빠져 울부짖지 않습니다. 그는 그저 깊은 잠에 빠져 아프리카 해변의 사자 꿈을 꿉니다. 세속적인 기준에서 그는 실패했을지 모르지만, 정신적 세계에서 그는 완벽한 승리를 거두었습니다. 결과(뼈)에 연연하지 않고 사투 그 자체를 삶의 창조적인 과정으로 받아들이는 태도는 니체가 말한 정신의 최종 단계인 ’어린아이’의 모습과 닮아 있습니다.\n\n\n\n\n마무리: 우리 삶의 청새치를 마주하는 법\n우리는 모두 각자의 바다에서 자신만의 청새치와 싸우고 있습니다. 때로는 그 결과가 상어 떼에게 뜯긴 뼈처럼 허무하게 느껴질 때도 있을 것입니다. 하지만 헤밍웨이와 니체는 우리에게 말합니다. 진정한 승리는 물고기의 무게에 있는 것이 아니라, 끝까지 낚싯줄을 놓지 않았던 당신의 손바닥 위 굳은살에 있다고 말입니다.\n오늘, 당신의 결과가 기대에 미치지 못했더라도 실망하지 마세요. 당신은 파괴되었을지 모르지만, 결코 패배하지 않았습니다. 산티아고처럼 사자 꿈을 꾸며 다시 내일의 바다를 준비하는 당신이 바로 이 시대의 초인입니다."
+  },
+  {
+    "objectID": "blog/posts/the-old-man-and-the-sea/search.html",
+    "href": "blog/posts/the-old-man-and-the-sea/search.html",
+    "title": "노인과 바다 & 니체 철학 연계 분석 (SEO 최적화)",
+    "section": "",
+    "text": "#노인과바다 #헤밍웨이 #니체철학 #아모르파티 #위버멘쉬 #불굴의의지 #인생책추천 #고전서평 #실존주의 #운명애\n\n\n\n\n\n84일간의 불운과 아모르파티(Amor Fati)\n\n산티아고 노인은 84일 동안 고기를 한 마리도 잡지 못하지만, 바다를 원망하지 않고 매일 다시 배를 띄웁니다.\n이는 주어진 운명을 원망하거나 체념하는 것이 아니라, 자신의 운명을 사랑하고 그 안에서 투쟁하는 니체의 ’운명애’를 보여줍니다.\n\n거대한 청새치와의 사투: 투쟁하는 위버멘쉬\n\n사흘 밤낮을 이어지는 사투는 단순히 생계를 위한 낚시가 아니라, 자신의 존재 가치를 증명하는 과정입니다.\n“인간은 파괴될지언정 패배하지 않는다”는 문장은 니체가 말한, 고통을 극복하고 자신을 초월하는 ’초인(위버멘쉬)’의 의지와 맞닿아 있습니다.\n\n뼈만 남은 물고기: 결과를 초월한 긍정\n\n상어 떼에게 고기를 다 뜯기고 뼈만 가지고 돌아왔을 때, 노인은 절망하지 않고 잠을 자며 ‘사자’ 꿈을 꿉니다.\n결과물(고기)보다 그 과정에서의 투쟁과 자신의 의지에 집중하는 태도는 ’어린아이’의 단계처럼 삶을 유희이자 창조로 받아들이는 경지입니다.\n\n\n\n\n\n\n“fishing boat lonely sea sunset” (고독한 도전)\n“big fish marlin jumping” (투쟁과 사투)\n“lion dream desert” or “skeleton fish boat” (승리와 평온)"
+  },
+  {
+    "objectID": "blog/posts/the-old-man-and-the-sea/search.html#주요-키워드",
+    "href": "blog/posts/the-old-man-and-the-sea/search.html#주요-키워드",
+    "title": "노인과 바다 & 니체 철학 연계 분석 (SEO 최적화)",
+    "section": "",
+    "text": "#노인과바다 #헤밍웨이 #니체철학 #아모르파티 #위버멘쉬 #불굴의의지 #인생책추천 #고전서평 #실존주의 #운명애"
+  },
+  {
+    "objectID": "blog/posts/the-old-man-and-the-sea/search.html#핵심-컨셉-파괴될지언정-패배하지-않는-초인",
+    "href": "blog/posts/the-old-man-and-the-sea/search.html#핵심-컨셉-파괴될지언정-패배하지-않는-초인",
+    "title": "노인과 바다 & 니체 철학 연계 분석 (SEO 최적화)",
+    "section": "",
+    "text": "84일간의 불운과 아모르파티(Amor Fati)\n\n산티아고 노인은 84일 동안 고기를 한 마리도 잡지 못하지만, 바다를 원망하지 않고 매일 다시 배를 띄웁니다.\n이는 주어진 운명을 원망하거나 체념하는 것이 아니라, 자신의 운명을 사랑하고 그 안에서 투쟁하는 니체의 ’운명애’를 보여줍니다.\n\n거대한 청새치와의 사투: 투쟁하는 위버멘쉬\n\n사흘 밤낮을 이어지는 사투는 단순히 생계를 위한 낚시가 아니라, 자신의 존재 가치를 증명하는 과정입니다.\n“인간은 파괴될지언정 패배하지 않는다”는 문장은 니체가 말한, 고통을 극복하고 자신을 초월하는 ’초인(위버멘쉬)’의 의지와 맞닿아 있습니다.\n\n뼈만 남은 물고기: 결과를 초월한 긍정\n\n상어 떼에게 고기를 다 뜯기고 뼈만 가지고 돌아왔을 때, 노인은 절망하지 않고 잠을 자며 ‘사자’ 꿈을 꿉니다.\n결과물(고기)보다 그 과정에서의 투쟁과 자신의 의지에 집중하는 태도는 ’어린아이’의 단계처럼 삶을 유희이자 창조로 받아들이는 경지입니다."
+  },
+  {
+    "objectID": "blog/posts/the-old-man-and-the-sea/search.html#이미지-검색-키워드-pixabay",
+    "href": "blog/posts/the-old-man-and-the-sea/search.html#이미지-검색-키워드-pixabay",
+    "title": "노인과 바다 & 니체 철학 연계 분석 (SEO 최적화)",
+    "section": "",
+    "text": "“fishing boat lonely sea sunset” (고독한 도전)\n“big fish marlin jumping” (투쟁과 사투)\n“lion dream desert” or “skeleton fish boat” (승리와 평온)"
+  },
+  {
+    "objectID": "FASTAPI.html",
+    "href": "FASTAPI.html",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "",
+    "text": "FastAPI framework, high performance, easy to learn, fast to code, ready for production\nDocumentation: https://fastapi.tiangolo.com\nSource Code: https://github.com/fastapi/fastapi\nFastAPI is a modern, fast (high-performance), web framework for building APIs with Python based on standard Python type hints.\nThe key features are:\n* estimation based on tests conducted by an internal development team, building production applications."
+  },
+  {
+    "objectID": "FASTAPI.html#sponsors",
+    "href": "FASTAPI.html#sponsors",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Sponsors",
+    "text": "Sponsors\n\n\nKeystone Sponsor\n\n\n\nGold and Silver Sponsors\n               \n\nOther sponsors"
+  },
+  {
+    "objectID": "FASTAPI.html#opinions",
+    "href": "FASTAPI.html#opinions",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Opinions",
+    "text": "Opinions\n“[…] I’m using FastAPI a ton these days. […] I’m actually planning to use it for all of my team’s ML services at Microsoft. Some of them are getting integrated into the core Windows product and some Office products.”\n\nKabir Khan - Microsoft (ref)\n\n\n“We adopted the FastAPI library to spawn a REST server that can be queried to obtain predictions. [for Ludwig]”\n\nPiero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - Uber (ref)\n\n\n“Netflix is pleased to announce the open-source release of our crisis management orchestration framework: Dispatch! [built with FastAPI]”\n\nKevin Glisson, Marc Vilanova, Forest Monsen - Netflix (ref)\n\n\n“I’m over the moon excited about FastAPI. It’s so fun!”\n\nBrian Okken - Python Bytes podcast host (ref)\n\n\n“Honestly, what you’ve built looks super solid and polished. In many ways, it’s what I wanted Hug to be - it’s really inspiring to see someone build that.”\n\nTimothy Crosley - Hug creator (ref)\n\n\n“If you’re looking to learn one modern framework for building REST APIs, check out FastAPI […] It’s fast, easy to use and easy to learn […]”\n“We’ve switched over to FastAPI for our APIs […] I think you’ll like it […]”\n\nInes Montani - Matthew Honnibal - Explosion AI founders - spaCy creators (ref) - (ref)\n\n\n“If anyone is looking to build a production Python API, I would highly recommend FastAPI. It is beautifully designed, simple to use and highly scalable, it has become a key component in our API first development strategy and is driving many automations and services such as our Virtual TAC Engineer.”\n\nDeon Pillsbury - Cisco (ref)"
+  },
+  {
+    "objectID": "FASTAPI.html#fastapi-mini-documentary",
+    "href": "FASTAPI.html#fastapi-mini-documentary",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "FastAPI mini documentary",
+    "text": "FastAPI mini documentary\nThere’s a FastAPI mini documentary released at the end of 2025, you can watch it online:"
+  },
+  {
+    "objectID": "FASTAPI.html#typer-the-fastapi-of-clis",
+    "href": "FASTAPI.html#typer-the-fastapi-of-clis",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Typer, the FastAPI of CLIs",
+    "text": "Typer, the FastAPI of CLIs\n\nIf you are building a CLI app to be used in the terminal instead of a web API, check out Typer.\nTyper is FastAPI’s little sibling. And it’s intended to be the FastAPI of CLIs. ⌨️ 🚀"
+  },
+  {
+    "objectID": "FASTAPI.html#requirements",
+    "href": "FASTAPI.html#requirements",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Requirements",
+    "text": "Requirements\nFastAPI stands on the shoulders of giants:\n\nStarlette for the web parts.\nPydantic for the data parts."
+  },
+  {
+    "objectID": "FASTAPI.html#installation",
+    "href": "FASTAPI.html#installation",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Installation",
+    "text": "Installation\nCreate and activate a virtual environment and then install FastAPI:\n\n$ pip install \"fastapi[standard]\"\n\n---&gt; 100%\n\nNote: Make sure you put \"fastapi[standard]\" in quotes to ensure it works in all terminals."
+  },
+  {
+    "objectID": "FASTAPI.html#example",
+    "href": "FASTAPI.html#example",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Example",
+    "text": "Example\n\nCreate it\nCreate a file main.py with:\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n\n\n@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int, q: str | None = None):\n    return {\"item_id\": item_id, \"q\": q}\n\n\nOr use async def…\n\nIf your code uses async / await, use async def:\n```Python hl_lines=“7 12” from fastapi import FastAPI\napp = FastAPI()\n@app.get(“/”) async def read_root(): return {“Hello”: “World”}\n@app.get(“/items/{item_id}”) async def read_item(item_id: int, q: str | None = None): return {“item_id”: item_id, “q”: q}\n\n**Note**:\n\nIf you don't know, check the _\"In a hurry?\"_ section about [`async` and `await` in the docs](https://fastapi.tiangolo.com/async/#in-a-hurry).\n\n&lt;/details&gt;\n\n### Run it\n\nRun the server with:\n\n&lt;div class=\"termy\"&gt;\n\n```console\n$ fastapi dev\n\n ╭────────── FastAPI CLI - Development mode ───────────╮\n │                                                     │\n │  Serving at: http://127.0.0.1:8000                  │\n │                                                     │\n │  API docs: http://127.0.0.1:8000/docs               │\n │                                                     │\n │  Running in development mode, for production use:   │\n │                                                     │\n │  fastapi run                                        │\n │                                                     │\n ╰─────────────────────────────────────────────────────╯\n\nINFO:     Will watch for changes in these directories: ['/home/user/code/awesomeapp']\nINFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)\nINFO:     Started reloader process [2248755] using WatchFiles\nINFO:     Started server process [2248757]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete."
+  },
+  {
+    "objectID": "FASTAPI.html#example-upgrade",
+    "href": "FASTAPI.html#example-upgrade",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Example upgrade",
+    "text": "Example upgrade\nNow modify the file main.py to receive a body from a PUT request.\nDeclare the body using standard Python types, thanks to Pydantic.\n```Python hl_lines=“2 7-10 23-25” from fastapi import FastAPI from pydantic import BaseModel\napp = FastAPI()\nclass Item(BaseModel): name: str price: float is_offer: bool | None = None\n@app.get(“/”) def read_root(): return {“Hello”: “World”}\n@app.get(“/items/{item_id}”) def read_item(item_id: int, q: str | None = None): return {“item_id”: item_id, “q”: q}\n@app.put(“/items/{item_id}”) def update_item(item_id: int, item: Item): return {“item_name”: item.name, “item_id”: item_id}\n\nThe `fastapi dev` server should reload automatically.\n\n### Interactive API docs upgrade\n\nNow go to [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).\n\n* The interactive API documentation will be automatically updated, including the new body:\n\n![Swagger UI](https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png)\n\n* Click on the button \"Try it out\", it allows you to fill the parameters and directly interact with the API:\n\n![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-04-swagger-03.png)\n\n* Then click on the \"Execute\" button, the user interface will communicate with your API, send the parameters, get the results and show them on the screen:\n\n![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-05-swagger-04.png)\n\n### Alternative API docs upgrade\n\nAnd now, go to [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc).\n\n* The alternative documentation will also reflect the new query parameter and body:\n\n![ReDoc](https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png)\n\n### Recap\n\nIn summary, you declare **once** the types of parameters, body, etc. as function parameters.\n\nYou do that with standard modern Python types.\n\nYou don't have to learn a new syntax, the methods or classes of a specific library, etc.\n\nJust standard **Python**.\n\nFor example, for an `int`:\n\n```Python\nitem_id: int\nor for a more complex Item model:\nitem: Item\n…and with that single declaration you get:\n\nEditor support, including:\n\nCompletion.\nType checks.\n\nValidation of data:\n\nAutomatic and clear errors when the data is invalid.\nValidation even for deeply nested JSON objects.\n\nConversion of input data: coming from the network to Python data and types. Reading from:\n\nJSON.\nPath parameters.\nQuery parameters.\nCookies.\nHeaders.\nForms.\nFiles.\n\nConversion of output data: converting from Python data and types to network data (as JSON):\n\nConvert Python types (str, int, float, bool, list, etc).\ndatetime objects.\nUUID objects.\nDatabase models.\n…and many more.\n\nAutomatic interactive API documentation, including 2 alternative user interfaces:\n\nSwagger UI.\nReDoc.\n\n\n\nComing back to the previous code example, FastAPI will:\n\nValidate that there is an item_id in the path for GET and PUT requests.\nValidate that the item_id is of type int for GET and PUT requests.\n\nIf it is not, the client will see a useful, clear error.\n\nCheck if there is an optional query parameter named q (as in http://127.0.0.1:8000/items/foo?q=somequery) for GET requests.\n\nAs the q parameter is declared with = None, it is optional.\nWithout the None it would be required (as is the body in the case with PUT).\n\nFor PUT requests to /items/{item_id}, read the body as JSON:\n\nCheck that it has a required attribute name that should be a str.\nCheck that it has a required attribute price that has to be a float.\nCheck that it has an optional attribute is_offer, that should be a bool, if present.\nAll this would also work for deeply nested JSON objects.\n\nConvert from and to JSON automatically.\nDocument everything with OpenAPI, that can be used by:\n\nInteractive documentation systems.\nAutomatic client code generation systems, for many languages.\n\nProvide 2 interactive documentation web interfaces directly.\n\n\nWe just scratched the surface, but you already get the idea of how it all works.\nTry changing the line with:\n    return {\"item_name\": item.name, \"item_id\": item_id}\n…from:\n        ... \"item_name\": item.name ...\n…to:\n        ... \"item_price\": item.price ...\n…and see how your editor will auto-complete the attributes and know their types:\n\n\n\neditor support\n\n\nFor a more complete example including more features, see the Tutorial - User Guide.\nSpoiler alert: the tutorial - user guide includes:\n\nDeclaration of parameters from other different places as: headers, cookies, form fields and files.\nHow to set validation constraints as maximum_length or regex.\nA very powerful and easy to use Dependency Injection system.\nSecurity and authentication, including support for OAuth2 with JWT tokens and HTTP Basic auth.\nMore advanced (but equally easy) techniques for declaring deeply nested JSON models (thanks to Pydantic).\nGraphQL integration with Strawberry and other libraries.\nMany extra features (thanks to Starlette) as:\n\nWebSockets\nextremely easy tests based on HTTPX and pytest\nCORS\nCookie Sessions\n…and more.\n\n\n\nDeploy your app (optional)\nYou can optionally deploy your FastAPI app to FastAPI Cloud, go and join the waiting list if you haven’t. 🚀\nIf you already have a FastAPI Cloud account (we invited you from the waiting list 😉), you can deploy your application with one command.\n\n$ fastapi deploy\n\nDeploying to FastAPI Cloud...\n\n✅ Deployment successful!\n\n🐔 Ready the chicken! Your app is ready at https://myapp.fastapicloud.dev\n\nThat’s it! Now you can access your app at that URL. ✨\n\nAbout FastAPI Cloud\nFastAPI Cloud is built by the same author and team behind FastAPI.\nIt streamlines the process of building, deploying, and accessing an API with minimal effort.\nIt brings the same developer experience of building apps with FastAPI to deploying them to the cloud. 🎉\nFastAPI Cloud is the primary sponsor and funding provider for the FastAPI and friends open source projects. ✨\n\n\nDeploy to other cloud providers\nFastAPI is open source and based on standards. You can deploy FastAPI apps to any cloud provider you choose.\nFollow your cloud provider’s guides to deploy FastAPI apps with them. 🤓"
+  },
+  {
+    "objectID": "FASTAPI.html#performance",
+    "href": "FASTAPI.html#performance",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Performance",
+    "text": "Performance\nIndependent TechEmpower benchmarks show FastAPI applications running under Uvicorn as one of the fastest Python frameworks available, only below Starlette and Uvicorn themselves (used internally by FastAPI). (*)\nTo understand more about it, see the section Benchmarks."
+  },
+  {
+    "objectID": "FASTAPI.html#dependencies",
+    "href": "FASTAPI.html#dependencies",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "Dependencies",
+    "text": "Dependencies\nFastAPI depends on Pydantic and Starlette.\n\nstandard Dependencies\nWhen you install FastAPI with pip install \"fastapi[standard]\" it comes with the standard group of optional dependencies:\nUsed by Pydantic:\n\nemail-validator - for email validation.\n\nUsed by Starlette:\n\nhttpx - Required if you want to use the TestClient.\njinja2 - Required if you want to use the default template configuration.\npython-multipart - Required if you want to support form “parsing”, with request.form().\n\nUsed by FastAPI:\n\nuvicorn - for the server that loads and serves your application. This includes uvicorn[standard], which includes some dependencies (e.g. uvloop) needed for high performance serving.\nfastapi-cli[standard] - to provide the fastapi command.\n\nThis includes fastapi-cloud-cli, which allows you to deploy your FastAPI application to FastAPI Cloud.\n\n\n\n\nWithout standard Dependencies\nIf you don’t want to include the standard optional dependencies, you can install with pip install fastapi instead of pip install \"fastapi[standard]\".\n\n\nWithout fastapi-cloud-cli\nIf you want to install FastAPI with the standard dependencies but without the fastapi-cloud-cli, you can install with pip install \"fastapi[standard-no-fastapi-cloud-cli]\".\n\n\nAdditional Optional Dependencies\nThere are some additional dependencies you might want to install.\nAdditional optional Pydantic dependencies:\n\npydantic-settings - for settings management.\npydantic-extra-types - for extra types to be used with Pydantic.\n\nAdditional optional FastAPI dependencies:\n\norjson - Required if you want to use ORJSONResponse.\nujson - Required if you want to use UJSONResponse."
+  },
+  {
+    "objectID": "FASTAPI.html#license",
+    "href": "FASTAPI.html#license",
+    "title": "AI 도서 리뷰 블로그",
+    "section": "License",
+    "text": "License\nThis project is licensed under the terms of the MIT license."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI 독서 리뷰 블로그",
+    "section": "",
+    "text": "최신 AI가 분석한 깊이 있는 도서 리뷰 목록입니다."
   }
 ]

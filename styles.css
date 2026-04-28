@@ -1,4 +1,4 @@
-/* Metallic Void - Digital Brutalism Theme */
+﻿/* Metallic Void - Digital Brutalism Theme */
 
 /* Basic Settings */
 body {
@@ -20,12 +20,12 @@ body {
 
 .quarto-title-block .quarto-title .title {
     color: #ffffff !important;
-    font-size: 3.2rem !important; /* 3.5 -> 3.2로 미세 조정 */
+    font-size: 3.2rem !important;
     font-weight: 900;
     text-transform: uppercase;
-    line-height: 1.5; /* 1.4 -> 1.5로 확대 */
-    letter-spacing: -0.01em; /* 자간을 조금 더 넓힘 */
-    margin-bottom: 2.5rem; /* 아래 여백 추가 */
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
 }
 
 .quarto-title-block .quarto-title .subtitle {
@@ -54,8 +54,8 @@ body {
 .quarto-listing-container-grid .quarto-grid-item {
     background-color: #000000;
     border: 1px solid #444444;
-    border-radius: 0px !important; /* No rounded corners */
-    transition: none !important; /* Instant reaction */
+    border-radius: 0px !important;
+    transition: none !important;
     margin-bottom: 1.5rem;
 }
 
@@ -63,7 +63,7 @@ body {
 .quarto-listing-container-grid .quarto-grid-item:hover {
     background-color: #ffffff !important;
     border: 1px solid #ffffff;
-    transform: none !important; /* No floating animation */
+    transform: none !important;
 }
 
 .quarto-listing-container-grid .quarto-grid-item:hover .listing-title,
@@ -98,7 +98,7 @@ blockquote {
     padding: 3rem;
     font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
     border-radius: 0px;
     margin: 4rem 0;
 }
